@@ -71,4 +71,9 @@ public class EmployeeController {
         return Result.success();
     }
 
+    public Result save(@RequestBody EmployeeDTO employeeDTO) {
+        employeeService.save(employeeDTO);
+        return null;
+    }
+
 }
