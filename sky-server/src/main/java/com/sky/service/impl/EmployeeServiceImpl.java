@@ -67,8 +67,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
         employee.setCreateTime(LocalDateTime.now());
         employee.setUpdateTime(LocalDateTime.now());
-        employee.setCreateUser(null);
-        employee.setUpdateUser(null);
+        employee.setCreateUser(10L);
+        employee.setUpdateUser(10L);
         employeeMapper.insert(employee);
     }
     //TODO:优化AI辅助卡手，详细阅读本项目代码后继续工作，学习如何像IJ一样跳转代码
